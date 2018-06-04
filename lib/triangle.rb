@@ -70,7 +70,7 @@ class Triangle
   end
 end
 
-triangle = Triangle.new(0, 0, 0)
-
-triangle = Triangle.new(3, 4, -5)
-triangle.kind
+# triangle = Triangle.new(0, 0, 0)
+#
+# triangle = Triangle.new(3, 4, -5)
+# triangle.kind
