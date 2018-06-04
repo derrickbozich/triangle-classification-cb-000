@@ -67,3 +67,6 @@ class Triangle
     end
   end
 end
+
+triangle = Triangle.new(0, 0, 0)
+triangle.kind
