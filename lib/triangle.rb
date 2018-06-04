@@ -23,8 +23,14 @@ class Triangle
       end
       # :idk
     end
+  end
 
-
+  def equilateral?
+    if self.inequal?
+      false
+    elsif @a == @b && @b == @c
+      true
+    end
   end
 
   def isosceles?
@@ -44,7 +50,7 @@ class Triangle
   end
 
   def inequal?
-    if @a <= 0 || @b <= 0 || @c <= 0 
+    if @a <= 0 || @b <= 0 || @c <= 0
       true
     elsif @a + @b < @c || @b + @c < @a || @c + @b < @a
       true
@@ -53,7 +59,7 @@ class Triangle
     end
   end
 
-  
+
 
   class TriangleError < StandardError
     def message
