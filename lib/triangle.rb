@@ -18,8 +18,8 @@ class Triangle
     else
       begin
         raise TriangleError
-      rescue
-        
+      rescue TriangleError => error
+        puts error.message
       end
     end
 
@@ -31,7 +31,7 @@ class Triangle
   end
 
   def isosceles?
-    if @a + @b < @c
+    if self.inequal?
       false
     elsif @a == @b || @b == @c || @a == @c
       true
@@ -39,10 +39,18 @@ class Triangle
   end
 
   def scalene?
-    if @a == 0 || @a + @b < @c
+    if self.inequal?
       false
     elsif @a != @b && @b != @c && @a != @c
       true
+    end
+  end
+
+  def inequal?
+    if @a + @b < @c || @b + @c < @a || @c + @b < @a
+      true
+    else
+      false
     end
   end
 
