@@ -44,12 +44,16 @@ class Triangle
   end
 
   def inequal?
-    if @a + @b < @c || @b + @c < @a || @c + @b < @a
+    if @a <= 0 || @b <= 0 || @c <= 0 
+      true
+    elsif @a + @b < @c || @b + @c < @a || @c + @b < @a
       true
     else
       false
     end
   end
+
+  
 
   class TriangleError < StandardError
     def message
