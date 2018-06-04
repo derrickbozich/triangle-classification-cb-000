@@ -16,12 +16,12 @@ class Triangle
     elsif self.scalene?
       :scalene
     else
-      # begin
-      #   raise TriangleError
-      # rescue TriangleError => error
-      #   puts error.message
-      # end
-      :idk
+      begin
+        raise TriangleError
+      rescue TriangleError => error
+        puts error.message
+      end
+      # :idk
     end
 
 
