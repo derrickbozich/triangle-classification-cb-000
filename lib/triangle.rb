@@ -54,7 +54,7 @@ class Triangle
   def inequal?
     if @a <= 0 || @b <= 0 || @c <= 0
       true
-    elsif @a + @b < @c || @b + @c < @a || @c + @b < @a
+    elsif @a + @b <= @c || @b + @c <= @a || @c + @a <= @b
       true
     else
       false
