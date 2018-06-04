@@ -11,9 +11,16 @@ class Triangle
   def kind
     if @a > 0 && @a == @b && @b == @c
       :equilateral
-    elsif side1
-
-
+    elsif self.isosceles?
+      :isosceles
+    elsif self.scalene?
+      :scalene
+    else
+      begin
+        raise TriangleError
+      rescue
+        
+      end
     end
 
 
@@ -29,7 +36,14 @@ class Triangle
     elsif @a == @b || @b == @c || @a == @c
       true
     end
+  end
 
+  def scalene?
+    if @a == 0 || @a + @b < @c
+      false
+    elsif @a != @b && @b != @c && @a != @c
+      true
+    end
   end
 
   class TriangleError < StandardError
