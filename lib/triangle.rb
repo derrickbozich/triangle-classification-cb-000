@@ -26,10 +26,6 @@ class Triangle
 
   end
 
-  def sum_side(a,b,c)
-    a+b > c ? true : false
-  end
-
   def isosceles?
     if self.inequal?
       false
