@@ -55,4 +55,5 @@ class Triangle
     def message
       puts "Your triangle is invalid"
     end
+  end
 end
