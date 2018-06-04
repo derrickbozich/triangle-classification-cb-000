@@ -16,8 +16,6 @@ class Triangle
     elsif self.scalene?
       :scalene
     else
-      raise TriangleError
-      
       begin
         raise TriangleError
       rescue TriangleError => error
